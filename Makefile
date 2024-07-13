@@ -27,3 +27,6 @@ before_build_ios:
 build_ios:
 	export ANDROID_NDK_HOME=$HOME/Library/Android/sdk/ndk/25.0.8775105
 	cargo lipo --release && cp target/universal/release/libfqrs.a dist/ios/Classes
+
+bench:
+	cargo bench --bench quircs
